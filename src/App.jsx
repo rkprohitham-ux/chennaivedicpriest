@@ -1,3 +1,5 @@
+import { FaBars, FaTimes } from "react-icons/fa";
+import React from "react";
 import "./App.css";
 import priestPhoto from "./images/jagadesh.jpg";
 import profilePhoto from "./images/profile.jpg";
@@ -14,16 +16,24 @@ import { FaHome, FaRing, FaBaby, FaOm } from "react-icons/fa";
 import { MdTempleHindu } from "react-icons/md";
 import { GiCrystalBall } from "react-icons/gi";
 import { TbRulerMeasure } from "react-icons/tb";
+
 function App() {
+  const [menuOpen, setMenuOpen] = React.useState(false);
 return (
 <>
 <nav className="navbar">
  <div className="logo">
   <h3>Jagadesh Sarma</h3>
-  <span>Vedic Priest Services</span>
+  <span>Vedic Priest | Prohithar</span>
 </div>
+<button
+  className="menu-btn"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? <FaTimes /> : <FaBars />}
+</button>
 
-  <div className="nav-links">
+ <div className={`nav-links ${menuOpen ? "active" : ""}`}>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#contact">Get in Touch</a>
@@ -154,9 +164,9 @@ return (
       <div className="card">
       <h3>
   <FaBaby className="service-icon" />
-  Seemantham
+  Punyahavacanam
 </h3>
-        <p>Traditional family ceremonies.</p>
+        <p>Naming Ceremony & Puberty</p>
       </div>
 <div className="card">
   <h3>
