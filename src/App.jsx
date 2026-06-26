@@ -254,7 +254,7 @@ return (
     <div className="contact-card">
       <p>📞 +91 9952097962</p>
       <p>✉️ rkprohitham@gmail.com</p>
-      <p>📍 Chennai, Tamil Nadu</p>
+      <p>📍56,Maneesh Avenue,Madhavaram, Chennai, Tamil Nadu</p>
     </div>
   </section>
 
